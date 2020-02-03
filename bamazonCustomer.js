@@ -25,3 +25,23 @@ function readProducts() {
     connection.end();
   });
 }
+
+function welcome() {
+  inquirer
+    .prompt([
+      {
+        name: "welcome",
+        message: "Welcome to Bamazon! Would you like to continue?",
+        type: "confirm",
+        default: true
+      }
+    ])
+    .then(function(user) {
+      if (user.welcome === true) {
+        inventory();
+      } else {
+        console.log("Thank you!");
+        welcome();
+      }
+    });
+}
