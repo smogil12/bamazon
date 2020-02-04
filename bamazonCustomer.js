@@ -82,3 +82,80 @@ function purchasePrompt() {
       }
     });
 }
+
+function storePrompt() {
+  inquirer
+    .prompt([
+      {
+        name: "inputId",
+        message: "Please select the item ID to purchase.",
+        type: "input"
+      },
+      {
+        name: "inputQuantity",
+        message: "How much quantity would you like to purchase?",
+        type: "input"
+      }
+    ])
+    .then(function(userPurchase) {
+      connection.query(
+        "SELECT * FROM products WHERE item_id=?",
+        userPurchase.inputId,
+        function(err, res) {
+          for (var i = 0; i < res.length; i++) {
+            if (userPurchase.inputQuantity > res[i].stock_quantity) {
+              console.log("Sorry! Not enough stock. Try again.");
+              welcome();
+            } else {
+              console.log("We will process your order.");
+              console.log("Item selected:");
+              console.log("Item: " + res[i].product_name);
+              console.log("Department: " + res[i].department_name);
+              console.log("Price: " + res[i].price);
+              console.log("Quantity: " + userPurchase.inputQuantity);
+              console.log(
+                "Total: " + res[i].price * userPurchase.inputQuantity
+              );
+
+              var newStock = res[i].stock_quantity - userPurchase.inputQuantity;
+              var purchaseId = userPurchase.inputId;
+              orderPrompt(newStock, purchaseId);
+            }
+          }
+        }
+      );
+    });
+}
+
+function orderPrompt(newStock, purchaseId) {
+  inquirer
+    .prompt([
+      {
+        name: "confirmOrder",
+        message: "Would you like to proceed with this purchase?",
+        type: "confirm",
+        default: true
+      }
+    ])
+    .then(function(userConfirm) {
+      if (userConfirm.confirmOrder === true) {
+        connection.query(
+          "UPDATE products SET ? WHERE ?",
+          [
+            {
+              stock_quantity: newStock
+            },
+            {
+              item_id: purchaseId
+            }
+          ],
+          function(err, res) {}
+        );
+        console.log("Purchase Complete! Thank you and have a great day");
+        welcome();
+      } else {
+        console.log("Try again later!");
+        welcome();
+      }
+    });
+}
