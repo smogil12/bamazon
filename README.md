@@ -23,3 +23,7 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 ![item id Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%201.32.30%20PM.png?raw=true)
 
 - After you type in your products item ID, you will be asked how many items you would like to purchase. If you request for more than is available in inventory, you will be told that there is not enough stock, then you will be taken back to the home screen message.
+
+![not enough stock Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.38.03%20PM.png?raw=true)
+
+- However, if there is enough stock, you will be shown a checkout reciept, and then you will be prompted to check out:
