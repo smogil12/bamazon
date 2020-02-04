@@ -12,7 +12,7 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 
 - Run node bamazonCustomer.js
 
-(https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%201.10.02%20PM.png?raw=true)
+![Welcome Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%201.10.02%20PM.png?raw=true)
 
 - Type in Y as prompted by the application. Then a table of the products will be shown:
 
