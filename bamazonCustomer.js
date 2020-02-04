@@ -18,15 +18,6 @@ connection.connect(function(err) {
   welcome();
 });
 
-function readProducts() {
-  console.log("Selecting all products...\n");
-  connection.query("SELECT * FROM products", function(err, res) {
-    if (err) throw err;
-    console.log(res);
-    connection.end();
-  });
-}
-
 function welcome() {
   inquirer
     .prompt([
