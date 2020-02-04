@@ -78,6 +78,7 @@ function purchasePrompt() {
         storePrompt();
       } else {
         console.log("Come back again another day!");
+        welcome();
       }
     });
 }
