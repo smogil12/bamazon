@@ -27,3 +27,7 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 ![not enough stock Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.38.03%20PM.png?raw=true)
 
 - However, if there is enough stock, you will be shown a checkout reciept, and then you will be prompted to check out:
+
+![receipt Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.42.01%20PM.png?raw=true)
+
+- Once you say yes to proceeding with your purchase, you will get a message saying "Purchase Complete" and then you will be taken back to the welcome screen.
