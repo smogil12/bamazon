@@ -11,3 +11,5 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 ### How to Use the Application
 
 - Run node bamazonCustomer.js
+
+* Type in Y as prompted by the application. Then a table of the products will be shown:
