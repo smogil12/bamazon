@@ -16,4 +16,6 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 
 - Type in Y as prompted by the application. Then a table of the products will be shown:
 
-(https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%201.11.51%20PM.png?raw=true)
+![Warehouse Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%201.11.51%20PM.png?raw=true)
+
+- The application will ask if you would like to purchase an item. Type in Y. Then, type in the item ID of the product that you would like to purchase.
