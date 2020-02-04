@@ -31,3 +31,11 @@ This application uses Javascript and Node.js. Additionally, several NPM packages
 ![receipt Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.42.01%20PM.png?raw=true)
 
 - Once you say yes to proceeding with your purchase, you will get a message saying "Purchase Complete" and then you will be taken back to the welcome screen.
+
+* What's cool about the app is that since five basketball purchased, the change in quantity of stock is reflected in the database:
+
+![stock Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.46.48%20PM.png?raw=true)
+
+The quantity went down from 630 to 625 since 5 basketballs were purchased!
+
+![stock Img](https://github.com/smogil12/bamazon/blob/master/images/Screen%20Shot%202020-02-04%20at%203.47.02%20PM.png?raw=true)
