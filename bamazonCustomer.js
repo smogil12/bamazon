@@ -58,7 +58,26 @@ function inventory() {
         table.push([itemId, productName, departmentName, price, stockQuantity]);
       }
       console.log(table.toString());
-      // purchasePrompt();
+      purchasePrompt();
     });
   }
+}
+
+function purchasePrompt() {
+  inquirer
+    .prompt([
+      {
+        name: "purchase",
+        message: "Would you like to purchase an item?",
+        type: "confirm",
+        default: true
+      }
+    ])
+    .then(function(user) {
+      if (user.purchase === true) {
+        storePrompt();
+      } else {
+        console.log("Come back again another day!");
+      }
+    });
 }
